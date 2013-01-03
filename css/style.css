@@ -1,0 +1,399 @@
+@charset "utf-8";
+/*------------------------------------------------------
+
+Theme Name: SQUARED - version 1.0
+Type: Core css
+
+CSS overview: 
+
+	1. Resets
+	2. Backgorund
+	3. Main Elements
+		i.gobal wrapper
+		ii.sidebar +content
+	4. Menu
+	5. Theme elements
+		i.portfolio
+		ii.blog
+		iii. form elements
+		iv.pagination
+	6. Footer
+	7. Links
+	8. Typography
+	9. Standard Elements
+		i.buttons
+		ii.columns
+		iii. highlights
+		iv.media frames
+		v.lists
+		vi.content lists
+		vii.comment lists
+		viii.blockquotes
+		ix. social
+		x. divs
+	10. Misellaneous
+		
+		
+
+---------------------------------------------------------*/
+
+/*--------------------------------------------------------
+	1.RESETS
+--------------------------------------------------------*/
+
+	*{margin:0px;padding:0px;}
+	html, body, div, h1, h2, h3, ul, ol, li, dt, p, table, th, td ,img{ margin: 0; padding: 0;border:none }
+
+/*--------------------------------------------------------
+	2.BACKGROUND
+--------------------------------------------------------*/
+
+
+	/*html{}*/
+	html,body{width:100%;height:100%; overflow:hidden;}
+	body{background:#fff;}
+	
+	.button-small, .button-medium, .button-large{outline: none;overflow: visible;cursor: pointer;}
+	.button-small:hover, .button-medium:hover, .button-large:hover{text-decoration:none;}
+
+
+/*--------------------------------------------------------
+	3.MAIN ELEMENTS
+--------------------------------------------------------*/
+
+	/*----------------------------
+	i.-- global wrapper
+	-----------------------------*/
+	
+	#wrapper{width:100%; height:100%; overflow:auto; position:relative;}
+	
+	/*----------------------------
+	ii.-- sidebar + main content 
+	-----------------------------*/
+	
+	/*NOTE :  settting #sidebar & #content-wrapper to display:none hides content fully, will not be visible for non js users*/
+	
+	#header{width:100%;position:relative; z-index:102;margin-bottom:3px;}
+	#header #inner{width:900px; position:relative;margin-bottom:3px;padding:15px 40px; left:-980px;}
+	#header #inner #logo{width:188px; margin:40px 0px;}
+	#toggleBut{width:85px; height:40px;text-align:center;float:left; cursor:pointer; display:none; margin-left:3px;}
+	#toggleBut div{width:60px; margin-left:20px;}
+	#content-wrapper{ position:relative; width:980px;left:-980px;z-index:101;} 
+	.content{width:900px;overflow:hidden; margin:auto; position:relative; padding:30px 40px 0 40px;}
+	
+
+/*--------------------------------------------------------
+	4.MENU
+--------------------------------------------------------*/
+
+	/*----------------------------
+	i.-- main menu
+	-----------------------------*/
+	
+	#navContainer{width:1025px;height:40px; position:relative;/* margin:0 auto;*/left:-940px;}
+	#navContainer #navContainerInner{width:887px;height:40px;padding:0px 10px 0px 40px;float:left;}
+	#nav{width:auto;height:40px;list-style:none;line-height:38px;float:left; padding-top:2px; margin-left:-20px;/*alignment correction*/}
+	#nav li{position:relative;float:left;display:block;padding:0 20px;}
+	#nav li a{display:block;background:none; outline:none;border:none;}
+	/*#nav li a:hover{}*/
+	/*#nav li a.active {}*/
+
+	/*----------------------------
+	ii.-- sub menu
+	-----------------------------*/
+	
+	#nav ul{width:150px;position:absolute;z-index:500;left:-9999px; padding:15px 0px;}
+	#nav ul li{width:100px; line-height:15px; margin:0 0 11px 0;border:none; text-align:left; /*switch to center for center align*/}
+	#nav ul.submenu li.last{border:none; margin:0px;}
+	#nav ul a{width:100px;display:block;}
+	#nav li:hover ul{left:0;margin: 0px;}
+	/*#nav li:hover ul{}*/
+
+
+/*--------------------------------------------------------
+	5.PAGE ELEMENTS
+--------------------------------------------------------*/
+
+	
+	/*----------------------------
+	i.-- portfolio
+	-----------------------------*/
+	
+	
+	
+	/*----------------------------
+	ii.-- blog
+	-----------------------------*/
+	
+	.post{width:585px;padding-bottom:30px; margin-bottom:30px; float:left;}
+	.post_full{width:585px;margin-left:-598px;}/*hide post off contnet screen*/
+	.post.last{margin:0px;padding:0px; border-bottom:none !important;}
+	.entrySpec{width:565px;margin-bottom:30px; padding:8px 10px;}
+	.dateContainer{width:auto;height:135px; position:absolute;z-index:1;top:0;}
+	.dateContainer.alignLeft{left:0;}
+	.dateContainer.alignRight{right:0;}
+	.dateDay,.dateMonthYr{width:100px; text-align:center;}
+	.dateDay{height:85px;position:relative;z-index:1;padding-top:20px;}
+	.dateMonthYr{height:30px; position:relative; z-index:1;}
+	.comment div{ margin-top:20px;}
+	.post_close{float:right;cursor:pointer;}
+	
+	
+	/*----------------------------
+	iii.-- forms
+	-----------------------------*/
+	
+	.field{width:276px; height:40px;border:none; padding:0 5px;margin-bottom:10px;}
+	.field.last{margin-bottom:0px;}
+	.field:focus{outline:none;border:none;}
+	.tarea{width:276px; height:131px;border:none;  padding:8px 5px 5px 5px;float:left; text-align:justify; overflow:auto;}
+	.tarea:focus{border:none; outline:none;}
+	.formProgress{float:left;margin-top:15px;}
+	 p.form{float:left;width:49%;margin:0 10px 15px 0;}
+	 p.form.last{margin:0 0px 15px 0;}
+	
+	/*----------------------------
+	iv.-- pagination
+	-----------------------------*/
+	
+	.ellipse{float: left;}
+	.container{width:900px; float:left;margin:0 0 30px 0;padding:0px; overflow:hidden;height:auto;}
+	.container.singlePage{margin:0px;padding:0;}
+	.spacing{padding-bottom:85px;}
+	.page_navigation , .alt_page_navigation{ width: 920px; height:auto; text-align: center;  /*white-space: nowrap;*/  line-height: 12px;  overflow: hidden;position:absolute; bottom:23px; text-align:center;}
+	.page_navigation.alignLeft{text-align:left}
+	.page_navigation.alignRight{text-align:right}
+	.page_navigation a, .alt_page_navigation a{margin:2px;width:30px; height:10px; display: inline-block; vertical-align: middle;}
+	ul.contentPaginate li{list-style:none; overflow:hidden;}
+	
+	/*----------------------------
+	vii.-- custom scroll
+	-----------------------------*/
+	.jThumbnailScroller .jTscrollerNextButton,.jThumbnailScroller .jTscrollerPrevButton{position:absolute; display:block; width:40px; height:40px;}
+	
+	/*----------------------------
+	viii.-- google map
+	-----------------------------*/
+	
+	#map_canvas{margin-bottom:30px;}
+
+
+/*--------------------------------------------------------
+	FOOTER
+--------------------------------------------------------*/
+
+	#footer{width:900px; /*height:50px;*/ padding:0px 40px 30px 40px; margin:auto; }
+	#footer #logoFooter{width:82px;padding-right:15px;margin-right:15px; float:left;}
+	#footer #info{line-height:17px;}
+
+/*--------------------------------------------------------
+	LINKS
+--------------------------------------------------------*/
+
+	a,a:visited{text-decoration:none; outline:none; border:none;}
+	a.r-more,a:visited.r-more{text-decoration:none; outline:none; border:none; float:right;}
+	a.cat{text-decoration:none; outline:none; border:none;}
+	
+
+
+/*--------------------------------------------------------
+	TYPOGRAPHY
+--------------------------------------------------------*/
+	
+	
+	h1,h2, h3, h4, h5, h6{/*ie fix*/position:relative;z-index:10;/**/} /*DO NOT REMOVE POSITION RELATIVE OR Z-INDEX, OR CUFON FADING WILL NOT WORK IN IE*/
+	h1,h2, h3, h4, h5, h6, p, ul, ol {margin-bottom: 30px;}
+	.pageHeading{float:left; padding-right:20px;/*ie fix*/position:relative;z-index:10;/**/}
+	p{font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+	p.last{margin:0px;}
+	p.slogan{width:100%; font-family: Arial, Helvetica, sans-serif;  font-size:12px; margin: -10px 0 0 0;text-align:right;}
+
+/*--------------------------------------------------------
+	9. STANDARD ELEMENTS
+--------------------------------------------------------*/
+
+	/*----------------------------
+	i.-- buttons
+	-----------------------------*/
+	
+	.button {display: inline-block;line-height: 1;position: relative;cursor: pointer;border:none;}
+	.button:active {position: relative;top: 1px;}
+	
+		/* button sizes */
+		.button.small {font-size: 11px;padding: 10px 20px;}
+		.button.medium{font-size: 13px;padding: 12px 25px;}
+		.button.large {font-size: 14px;padding: 15px 25px;}
+		.button.alignLeft{float:left;}
+		.button.alignRight{float:right;}
+	 
+		/*button colors*/
+		/*ref to style_theme.css*/
+		
+		/*button effects*/
+		/*ref to style_theme.css*/
+	
+	/*----------------------------
+	ii.-- columns
+	-----------------------------*/
+	
+	.one_half, .one_third, .one_fourth,.one_fifth, .two_third, .three_fourth{height:auto; float:left;margin-right:5%;overflow:hidden;padding-top:2px;}
+		
+		.one_half{width:47.5%;}
+		.one_third{width:30%;}
+		.one_fourth{width:21.25%;}
+		.one_fifth{width:16%;}
+		.two_third{width:65%;}
+		.three_fourth{width:73.25%;}
+		.col_last{margin-right: 0 !important; clear: right;}
+
+	
+	/*----------------------------
+	iii.-- highlights
+	-----------------------------*/
+	
+	.highlight{padding:2px 5px;}
+	.underline{padding:0px;}
+	
+		/*highlights colors*/
+		/*ref to style_theme.css*/
+		
+		/*highlights effects */
+		/*ref to style_theme.css*/
+	
+	/*----------------------------
+	iv.-- media framing/shadows
+	-----------------------------*/
+	
+	.media_holder{margin-bottom:30px;}
+	
+		._imageThumb,._videoThumb {position:absolute;border:none;z-index:4; }
+		._scrollThumb{ position:relative;border:none; z-index:4;}
+		._blogThumb{position:absolute;border:none;z-index:4;}
+		
+		/*frames*/
+		.image_frame{position:relative;}
+		._border_simple, ._border_thick-1, ._border_thick-2{padding:5px;}
+
+		/*media alignment/wrappeds*/
+		.media_holder.alignLeft{float:left;margin-right:20px;}
+		.media_holder.alignRight{float:right;margin-left:20px;}
+		.media_holder.alignLeftWrapped{float:left;margin-right:20px; margin-bottom:150px;}
+		.media_holder.alignRightWrapped{float:right;margin-left:20px; margin-bottom:10px;}
+
+		/*folio speicific*/
+		.media_holder.folio{ float:left;margin:0px 5px 5px 0px;}
+		.media_holder.last{margin-right:0px;}
+		
+		/*blog specific*/
+		.media_holder.blog{margin-bottom:0px;}
+		
+		/*drop shadow*/
+		.drop_shadow{margin:0 auto; display:block;}
+		
+		/*image-hover containers*/
+		._rollover {position:absolute;border:none;z-index:2;} 
+		._rollover-social{position:absolute;border:none;z-index:2; opacity:0;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0);} 
+		._original{position:relative; display:block;}
+		._thumb-ind{position:absolute; z-index:3;width:100%;}
+		
+		/*image quote overlay*/
+		._imageQuote{overflow:hidden;position:absolute; z-index:2; padding:20px;}
+		._imageQuote-2{overflow:hidden;position:absolute; z-index:2; padding:20px;}
+		._imageQuote.alignLeft,._imageQuote-2.alignLeft{left:0}
+		._imageQuote.alignRight,._imageQuote-2.alignRight{right:0}
+		._imageQuote.top,._imageQuote-2.top{top:0}
+		._imageQuote.bottom,._imageQuote-2.bottom{bottom:0}
+		
+	/*----------------------------
+	v.-- lists
+	-----------------------------*/	
+	
+	ul.list li{margin-bottom: 2px;padding-bottom: 2px;padding-left: 25px;}
+	
+	/*----------------------------
+	vi.-- content lists
+	-----------------------------*/	
+	
+	ul.content_list{width:100%; list-style:none;}
+	
+		ul.content_list li{width:auto;margin-bottom:30px; padding-bottom:30px;float:left;}
+		ul.content_list li p{margin:0px}
+		ul.content_list li p span.title{padding:5px;}
+		ul.content_list li .media_holder{margin-bottom:0px;}
+		ul.content_list li.last{border:none;padding:0px;}
+		
+	/*----------------------------
+	vii.-- comment lists
+	-----------------------------*/	
+	
+	ul.comment_list{width:100%; list-style:none;}
+	
+		ul.comment_list li{width:598px;margin-bottom:30px; padding-bottom:30px;float:left;}
+		ul.comment_list li .avatar{float:left; margin-right:25px;}
+		ul.comment_list li .comment_left{width:523px; float:left;}
+		.comment_name,.comment_date,.commentary p{ width:100%;margin-bottom:15px;}
+		ul.comment_list li .media_holder{margin-bottom:0px;}
+		
+	
+	/*----------------------------
+	viii.-- blockquotes
+	-----------------------------*/
+
+	blockquote{margin:10px 0 30px 0; clear: both;overflow:auto;}
+		
+		/*quote positioning*/
+		blockquote p {float:left;margin:0 0 15px 45px;padding-top:3px;}
+		blockquote p.clientRef {margin:0px 0 0 45px;}
+		
+		/*blockquote alignment*/
+		blockquote.alignLeft{width:200px; float:left; margin:10px 15px 15px 0 ;}
+		blockquote.alignRight{width:200px; float:right ;margin:10px 0 15px 15px;}
+	
+	
+	/*----------------------------
+	ix.-- social
+	-----------------------------*/
+	
+	.icon_holder{width:20px; height:20px;}
+	.icon_holder.alignRight{float:right; margin-left:8px;}
+	.icon_holder.alignLeft{float:left; margin-right:8px;}
+	
+	/*----------------------------
+	x.-- divs
+	-----------------------------*/
+	
+	/*.div-simple, .div-double{}*/
+	/*ref to style_theme.css
+	
+	
+	/*div spacing*/
+	._0{margin:0px;}
+	
+	._10{margin:5px 0px;}
+	._t10{margin-top:0px;}
+	._b10{margin-bottom:0px;}
+	
+	._20{margin:20px 0px;}
+	._t20{margin-top:20px;}
+	._b20{margin-bottom:20px;}
+	
+	._30{margin:30px 0px;}
+	._t30{margin-top:30px;}
+	._b30{margin-bottom:30px;}
+	
+	._40{margin:30px 0px;}
+	._t40{margin-top:30px;}
+	._b40{margin-bottom:30px;}
+	
+
+
+/*--------------------------------------------------------
+	10. MISCELLANEOUS
+--------------------------------------------------------*/	
+
+  .clear{clear:both;}
+  .clearLeft{clear:left;}
+  .clearRight{clear:right;}
+  .hide{display:none;}
+  .show{display:block;}
+

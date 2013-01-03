@@ -1,0 +1,87 @@
+/*
+
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version : 3.2.4
+	Site	: www.buildinternet.com/project/supersized
+	
+	Theme 	: Shutter 1.1
+	Author	: Sam Dunn
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+
+	/* Controls Bar
+	----------------------------*/
+	#controls-wrapper {width: 100%;height:110px;position: absolute; left:0; top:50%;margin-top:-55px; overflow:hidden;display:block;text-align:center;z-index:100; display:none;}
+			/*added*/
+			.captionContainer{width: 100%;position: relative;overflow:hidden;display:block;text-align:center;height:46px;padding-top:10px;}
+			
+			/*modified*/
+			#slidecaption {color:#fff; font:400 25px Arial, Helvetica, sans-serif; padding:15px 25px 10px 25px;/*customize as necessary*/ text-align:center;/*padding:30px 25px;*/ text-transform:uppercase;/*ie fix*/position:relative;z-index:12;/**/display:none;}
+			
+			/*added*/
+			#slidecaption-grande{font: 30px "League Gothic";color:#fff; padding:10px 25px;text-align:center;/*ie fix*/position:relative;z-index:12;/**/display:none;}
+			
+			/*added*/
+			#s_ind{width: 100%;height:80px;position: absolute;bottom:0;padding-top:5px;margin-top:-160px;overflow:hidden;color:#fff;  font:80px  "League Gothic", Helvetica, Arial, sans-serif; opacity:1; text-align:center;/*ie fix*/position:absolute;z-index:12;/**/b}
+			
+			#navigation { float:right; margin:0px 20px 0 0; }
+				#play-button{ float:left; margin-top:1px;border-right:1px solid #333; background:url('../img/bg-hover.html') repeat-x 0 44px; }
+					#play-button:hover{ background-position:0 1px; cursor:pointer;}
+				
+				
+				#navArrows{display:block;}/*nav arrow container*/
+				
+				#prevslide, #nextslide{ position:absolute; bottom:33px; height:38px; width:21px; cursor:pointer; z-index:101;}
+				
+					/*ref to style_theme.css*/
+					/*#prevslide{left:50px; background: url(../images/slide_nav.png) 0 0px no-repeat; margin-right:1px; }
+					#nextslide{right:50px; background:  url(../images/slide_nav.png) 0 -150px no-repeat;  }
+						#prevslide:active, #nextslide:active{ margin-top:3px; }
+						#prevslide:hover{background:url url(../images/slide_nav.png) 0 -80px no-repeat; cursor:pointer;}
+						#nextslide:hover{background:url url(../images/slide_nav.png) 0px -120px no-repeat;cursor:pointer;}*/
+				
+				ul#slide-list{ padding:15px 0; float:left; position:absolute; left:50%; }
+					ul#slide-list li{ list-style:none; width:12px; height:12px; float:left; margin:0 5px 0 0; }
+						ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }
+						ul#slide-list li a{ display:block; width:12px; height:12px; background:url('../img/nav-dot.html') no-repeat 0 -24px; }
+							ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
+				
+				#tray-button{ float:right; margin-top:1px; border-left:1px solid #333; background:url('../img/bg-hover.html') repeat-x 0 44px; }
+					#tray-button:hover{ background-position:0 1px; cursor:pointer; }
+		
+	
+	/* Progress Bar
+	----------------------------*/					
+	#progress-back{ z-index:5; position:fixed; bottom:0px; left:0; height:1px; width:100%; background:#333; }
+		#progress-bar{ position:relative; height:1px; width:100%; background:#fff; }
+	
+	
+	/* Thumbnail Navigation
+	----------------------------*/	
+	#nextthumb,#prevthumb { z-index:2; display:none; position:fixed; bottom:61px; height:75px; width:100px; overflow:hidden; background:#ddd; border:1px solid #fff; -webkit-box-shadow:0 0 5px #000; }
+		#nextthumb { right:12px; }
+		#prevthumb { left:12px; }
+			#nextthumb img, #prevthumb img { width:150px; height:auto;  }
+			#nextthumb:active, #prevthumb:active { bottom:59px; }
+			#nextthumb:hover, #prevthumb:hover { cursor:pointer; }
+	
+	
+	/* Thumbnail Tray
+	----------------------------*/			
+	#thumb-tray{ position:fixed; z-index:3; bottom:0; left:0; background:url(../img/bg-black.html); height:150px; width:100%; overflow:hidden; text-align:center; -moz-box-shadow: 0px 0px 4px #000; -webkit-box-shadow: 0px 0px 4px #000; box-shadow: 0px 0px 4px #000; }
+		
+		#thumb-back, #thumb-forward{ position:absolute; z-index:5; bottom:42px; height:108px; width:40px; }
+			#thumb-back{ left:0; background: url('../img/thumb-back.html') no-repeat center center;}
+			#thumb-forward{ right:0; background:url('../img/thumb-forward.html') no-repeat center center;}
+				#thumb-back:hover, #thumb-forward:hover{ cursor:pointer; background-color:rgba(256,256,256, 0.1); }
+					#thumb-back:hover{ border-right:1px solid rgba(256,256,256, 0.2); }
+					#thumb-forward:hover{ border-left:1px solid rgba(256,256,256, 0.2); }
+		
+		
+		ul#thumb-list{ display:inline-block; list-style:none; position:relative; left:0px; padding:0 0px; }
+			ul#thumb-list li{ background:#111; list-style:none; display:inline; width:150px; height:108px; overflow:hidden; float:left; margin:0; }
+				ul#thumb-list li img { width:200px; height:auto; opacity:0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter:alpha(opacity=60); }
+				ul#thumb-list li.current-thumb img, ul#thumb-list li:hover img{ opacity:1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); }
+				ul#thumb-list li:hover{ cursor:pointer; }

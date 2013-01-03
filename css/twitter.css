@@ -1,0 +1,12 @@
+
+#twitter{margin-bottom:30px;}
+#tweet-container{width:276px;height:auto;overflow:hidden;}
+.tweet{padding-bottom:15px;margin-bottom:15px;border-bottom:none;background:none;width:auto;overflow:hidden;height:auto;}
+.tweet .avatar,.tweet .user,.tweet .time{float:left;}
+.tweet .time{text-transform:none;color:#333333;white-space:nowrap;font-family: "Times New Roman", Times, serif;font-size:11px;font-style:italic;}
+.tweet .avatar {width:36px;margin-right:10px;}
+.tweet .avatar img{width:36px;height:36px;border:none;/*2px solid #eeeeee*/margin-top:22px;}
+.tweet .txt{width:276px;margin:22px 0 8px 0;font-family:Arial, Helvetica, sans-serif;font-size:12px;line-height:18px;}
+.tweet .user{font-weight:bold;margin-top:2px;}
+#loading{margin:95px  242px;}
+
